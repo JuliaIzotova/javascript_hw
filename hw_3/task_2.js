@@ -5,6 +5,7 @@ console.log(Number(num) + Number(num + num) + Number(num + num + num));
 
 
 
+
 //Возможные варианты решения задачи 
 // let number = parseInt(2.9)
 // number = String(number)
