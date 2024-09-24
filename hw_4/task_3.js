@@ -1,7 +1,7 @@
 let minAge = 18;
 let maxAge = 60;
 let age = "100";
-if(Number.isNaN(age)) {
+if(isNaN(age)) {
     console.log("Incorrect data type")
 }else {
     if(age < minAge){
@@ -14,3 +14,6 @@ if(Number.isNaN(age)) {
         console.log("Technical work")
     }
 }
+
+// console.log(Number.isNaN('100F'));
+// console.log(isNaN('100F'));
