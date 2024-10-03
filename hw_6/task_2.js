@@ -1,6 +1,6 @@
 const competitorPizzas = ["Peperoni", "Caprichosa", "Diablo", "4 cheeses", "hawai"];
-const myPizzas = ["peperoni", "margarita", "chicken", "Diablo"];
-// const myPizzas = ["Peperoni", "Caprichosa", "Diablo", "4 cheeses", "hawai"];
+// const myPizzas = ["peperoni", "margarita", "chicken", "Diablo"];
+const myPizzas = ["Peperoni", "Caprichosa", "Diablo", "4 cheeses", "hawai"];
 const extraPizza = [];
 
 for (let i = 0; i < myPizzas.length; i++) {
@@ -19,18 +19,5 @@ for (const pizza of myPizzas) {
 if (extraPizza.length !== 0 ){
     console.log(extraPizza);
 }else{
-    console.log("null");
+    console.log(null);
 }
-
-
-
-
-
-
-
-
- 
-
-
-
-    
