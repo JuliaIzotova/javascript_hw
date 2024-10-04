@@ -33,5 +33,3 @@ function findMissingNumber(arr) {
 }
 console.log(findMissingNumber(arr));
 separateLogs();
-
-
