@@ -1,4 +1,3 @@
-// Имеется объект
 const character = { 
     name: "Barney", 
     age: 36,
