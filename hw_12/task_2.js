@@ -19,7 +19,7 @@ async function createTodo(bodyTodo) {
             body: JSON.stringify(bodyTodo)
         })
         if (!response.ok) {
-            throw new Error(`Ошибка ответа ${response.status}`)
+            throw new Error(`Ошибка ответа: ${response.statusText}`, { cause: response.status })
         }
         const data = await response.json();
         for (const key in bodyTodo) {
