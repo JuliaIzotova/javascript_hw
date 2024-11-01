@@ -29,7 +29,7 @@ const anotherQa = {
 };
 console.log(qa.getInfo.bind(anotherQa)('Hello'));
 console.log(qa.getInfo.call(anotherQa, 'Hello'));
-console.log(qa.getInfo.apply(anotherQa, ["Hi"]));
+console.log(qa.getInfo.apply(anotherQa, ['Hi']));
 separateLogs();
 
 // 3. Closures
