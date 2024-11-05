@@ -50,13 +50,13 @@ class Employee {
         }
         this.#salary = newSalary;
      }
-
+// 3. Реализуйте метод getFullName() — возвращающий полное имя сотрудника.
      getFullName() {
         return `${this._firstName} ${this._lastName}`;
     }
 }
 
-    // 4. Проверьте корректную работу класса, создав несколько экземпляров и протестировав геттеры и сеттеры:
+// 4. Проверьте корректную работу класса, создав несколько экземпляров и протестировав геттеры и сеттеры:
 const emp1 = new Employee("John", "Doe", "Developer", 3000);
 console.log(emp1.firstName); // "John"
 emp1.salary = 3100;
@@ -122,7 +122,7 @@ class Company {
         return `Компания ${this._title}\nАдрес ${this._address}\nКоличество сотрудников ${this.#employees.length}`
     }
 }
-    /*8. Проверьте корректную работу: */
+//8. Проверьте корректную работу:
 const company = new Company("Tech Corp", "123-456", "Main Street");
     // const emp1 = new Employee("John", "Doe", "Developer", 3000);
 const emp2 = new Employee("Barbara", "Johnson", "QA", 2500);
@@ -130,5 +130,3 @@ company.addEmployee(emp1);
 company.addEmployee(emp2);
 console.log(company.getEmployees()); // [Employee, Employee] 
 console.log(company.getInfo()); 
-
-

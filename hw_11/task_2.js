@@ -29,7 +29,7 @@ class Employee {
         return this._profession;
       }
       set profession(profession) {
-        if ((typeof profession !== "string") || (!(/^[A-Za-z\s]*$/).test(profession)) || (profession.length === 0)) {
+        if ((typeof profession !== "string") || (!(/^[A-Za-z\s]*$/).test(profession))) {
             throw new Error (`Invalid profession ${this._profession}`)     
         }  this._profession = profession;
     }
@@ -97,12 +97,14 @@ class Company {
         return index;
     }
     removeEmployee(firstName) {
-        const index = this.#getEmployeeIndex(firstName); // Здесь может быть выброшена ошибка, если сотрудник не найден
-        this.#employees.splice(index, 1); // Удаляем сотрудника
+        const index = this.#getEmployeeIndex(firstName);  
+        this.#employees.splice(index, 1); 
     }
     getTotalSalary() {
-        return this.#employees.reduce((total, employee) => total + employee.salary, 0)}
+        return this.#employees.reduce((total, employee) => total + employee.salary, 0)
     }
+}
+
         
 const emp1 = new Employee("John", "Doe", "Developer", 3000);
 const emp2 = new Employee("Jane", "Smith", "Manager", 5000);
