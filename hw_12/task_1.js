@@ -1,12 +1,9 @@
 // 1. Создайте функцию delayTwoSeconds, принимающую на вход коллбэк функцию, 
 //которая будет отрабатывать спустя 2 секунды после вызова delayTwoSeconds
 function delayTwoSeconds(callback) {
-    setTimeout(() => {
-        callback();
-    }, 2000);
+    setTimeout(() => callback(), 2000); // or setTimeout(callback, 2000);
 }
-delayTwoSeconds(() => {console.log('wait 2 seconds for function');
-});
+delayTwoSeconds(() => console.log('wait 2 seconds for function'));
 // 2. Создайте переменную, в которую присвоите новый промис. 
 //Промис должен резолваться с числом 1. Обработайте промис методом .then и выведите результат его резолва в консоль
 const promise = new Promise((resolve, reject) => {
