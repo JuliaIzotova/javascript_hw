@@ -77,6 +77,9 @@ class Company {
     }
 
     addEmployee(employee) {
+        if (!(employee instanceof Employee)) {
+            throw new Error('не инстанс Employee');
+        }
         if (this.#employees.some(newEmployee => newEmployee.getFullName() === employee.getFullName())) {
             throw new Error(`Такой тип как '${employee.getFullName()}' уже есть`);
         }
