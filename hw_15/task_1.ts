@@ -3,7 +3,6 @@
 function wrapInArray<T>(arg: T): T[] {
     return [arg];
  }
-
 const numberArray = wrapInArray(5); // [5]
 const stringArray = wrapInArray('Hello'); // ['Hello']
 console.log(numberArray);
@@ -15,7 +14,6 @@ console.log(stringArray);
 function getLastItem<T>(value: T[]): T {
     return value[value.length -1];
 }
-
 console.log(getLastItem([1, 2, 3, 4]));
 console.log(getLastItem(['a', 'b', 'c'])); 
 
