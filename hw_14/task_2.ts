@@ -52,10 +52,7 @@ class Developer extends Employee {
     }
   }
 
-
-
 const manager = new Manager('Julia', 'Izotova', 2, 'scrum');
 console.log(manager.getDetails());
 const developer = new Developer('Julien', 'Izotikus', 5, 'ts')
 console.log(developer.getDetails())
-
