@@ -15,7 +15,7 @@ describe("Dynamic controls", async () => {
       await $(selectors.linkSelector("dynamic_controls")).click();
       await $(selectors.buttonRemoveOrAddCheckboxSelector).waitForDisplayed();
       const actualText = await $(selectors.headerSelector).getText();
-      expect(actualText).toContain(messages.header);
+      expect(actualText).toBe(messages.header);
   });
 
   it('check checkbox', async function () {
@@ -35,16 +35,18 @@ it('remove and return checkbox', async function () {
       reverse: true,
     });
   const actualText = await $(selectors.messageSelector).getText();
-  expect(actualText).toContain(messages.message2);
+  expect(actualText).toBe(messages.message2);
   await $(selectors.buttonRemoveOrAddCheckboxSelector).click();
   await $(selectors.buttonRemoveOrAddCheckboxSelector).waitForDisplayed();
   const actualText1 = await $(selectors.messageSelector).getText();
-  expect(actualText1).toContain(messages.message1);
+  expect(actualText1).toBe(messages.message1);
 
 });
-it('check subheader', async function (){
+it('check message', async function (){
   await $(selectors.linkSelector("dynamic_controls")).click();
-    await waitForElementWithText(selectors.subheader, "Remove/add", 5000);
+  await $(selectors.checkboxSelector).click();
+  await $(selectors.buttonRemoveOrAddCheckboxSelector).click();
+  await waitForElementWithText(selectors.messageSelector, "It's gone!", 5000);
 });
 });
 
